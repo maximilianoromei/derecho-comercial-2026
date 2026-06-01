@@ -1,69 +1,144 @@
-:root{
-    --blue:#003366;
-    --bg:#f5f7fb;
-    --card:#ffffff;
-    --border:#e6e9ef;
+/* =========================
+   BASE
+========================= */
+
+:root {
+  --primary: #0b1f3a;     /* azul institucional profundo */
+  --accent: #1f6feb;      /* azul moderno */
+  --bg: #f6f8fb;          /* fondo suave */
+  --card: #ffffff;
+  --text: #1c1f24;
+  --muted: #6b7280;
+  --border: #e5e7eb;
 }
 
-body{
-    margin:0;
-    font-family:Arial, sans-serif;
-    background:var(--bg);
-    color:#222;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* HEADER */
-header{
-    background:var(--blue);
-    color:white;
-    padding:40px 20px;
-    text-align:center;
+body {
+  font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
 }
 
-header h1{
-    margin:0;
-    font-size:2rem;
+/* =========================
+   LAYOUT
+========================= */
+
+.container {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 20px;
 }
 
-/* CONTAINER */
-.container{
-    max-width:1100px;
-    margin:auto;
-    padding:30px;
+/* =========================
+   HEADER
+========================= */
+
+h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 20px;
 }
 
-/* TITULOS */
-h2{
-    color:var(--blue);
-    border-left:5px solid var(--blue);
-    padding-left:10px;
-    margin-top:40px;
+h2 {
+  font-size: 1.2rem;
+  color: var(--primary);
+  margin-bottom: 10px;
 }
 
-/* CARD */
-.card{
-    background:var(--card);
-    border:1px solid var(--border);
-    border-radius:10px;
-    padding:15px;
-    margin:15px 0;
+/* =========================
+   CARDS (CLASES)
+========================= */
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 18px 20px;
+  margin-bottom: 16px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 
-/* LINKS */
-a{
-    display:inline-block;
-    margin:5px 10px 5px 0;
-    text-decoration:none;
-    color:var(--blue);
-    font-weight:bold;
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
 }
 
-/* DETAILS */
-details{
-    margin-top:10px;
+.card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 12px;
+  color: var(--primary);
 }
 
-summary{
-    cursor:pointer;
-    color:#555;
+/* =========================
+   LINKS / BOTONES
+========================= */
+
+a {
+  display: inline-block;
+  margin-right: 10px;
+  margin-top: 6px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 0.95rem;
+  color: var(--accent);
+  border: 1px solid transparent;
+  transition: all 0.2s ease;
+}
+
+a:hover {
+  background: rgba(31, 111, 235, 0.08);
+  border-color: rgba(31, 111, 235, 0.2);
+}
+
+/* =========================
+   SECCIONES INTERNAS (clase.html)
+========================= */
+
+.block {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+.block h2 {
+  margin-bottom: 10px;
+}
+
+/* =========================
+   DETAILS (colapsables)
+========================= */
+
+details {
+  margin-top: 10px;
+  font-size: 0.95rem;
+}
+
+summary {
+  cursor: pointer;
+  color: var(--muted);
+}
+
+/* =========================
+   UTILIDADES
+========================= */
+
+small {
+  color: var(--muted);
+}
+
+hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 20px 0;
 }
